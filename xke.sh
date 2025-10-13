@@ -375,7 +375,7 @@ echo "----------------------------------"
 # =======================================================
 echo "==== 6. 安装 UDPGW ===="
 if [ ! -d "/root/badvpn" ]; then
-    git clone https://github.com/ambrop72/badvpn.git /root/badvpn
+    git clone https://github.com/ambrop72/badvpn.git /root/badvpn
 fi
 mkdir -p /root/badvpn/badvpn-build
 cd /root/badvpn/badvpn-build
