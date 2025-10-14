@@ -342,7 +342,7 @@ sudo openssl req -x509 -nodes -newkey rsa:2048 \
 -keyout /etc/stunnel/certs/stunnel.key \
 -out /etc/stunnel/certs/stunnel.crt \
 -days 1095 \
--subj "/CN=$(hostname -f)"
+-subj "/CN=topup.2degreesmobile.co.nz"
 sudo sh -c 'cat /etc/stunnel/certs/stunnel.key /etc/stunnel/certs/stunnel.crt > /etc/stunnel/certs/stunnel.pem'
 
 # Stunnel 配置 - ciphers = ALL 兼容客户端空加密缺陷
