@@ -319,10 +319,18 @@ main() {
   TMP_DIR="$(mktemp -d)"
   trap 'rm -rf "${TMP_DIR}"' EXIT INT TERM
 
+  # arch="$(detect_arch)"
+  # resolved_version="$(resolve_version "${VERSION}")"
+  # asset="vohive_${resolved_version}_linux_${arch}"
+  # base="https://github.com/${REPO}/releases/download/
   arch="$(detect_arch)"
-  resolved_version="$(resolve_version "${VERSION}")"
-  asset="vohive_${resolved_version}_linux_${arch}"
+  # 强制指定 resolved_version 为 v1.5.5（带 v）
+  resolved_version="v1.5.5"
+  
+  # 精准匹配你 GitHub Release 里的实际文件名
+  asset="vohive_v1.5.5-10-gf9eb85d_linux_${arch}"
   base="https://github.com/${REPO}/releases/download/${resolved_version}"
+  ${resolved_version}"
   downloaded="${TMP_DIR}/${asset}"
   extracted="${downloaded}"
 
